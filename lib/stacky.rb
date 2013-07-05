@@ -13,6 +13,8 @@ class Stacky
     if path
       open(@stack_url.question(path))
     end
+
+    "hmm... i don't know yet"
   end
 
   def question_page(keyword)
