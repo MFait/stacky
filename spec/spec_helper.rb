@@ -15,9 +15,7 @@ def answer_doc title, question, answer
       <div id="question-header">
         <h1 itemprop="name"><a href="/questions/127932/" class="question-hyperlink">#{title}</a></h1>
       </div>
-      <div class="post-text" itemprop="description">
-        <p><code>#{question}</code>:</p>
-      </div>
+      <div class="post-text" itemprop="description">#{question}</div>
       <tr>
         <td class="votecell">
           <div class="vote">
