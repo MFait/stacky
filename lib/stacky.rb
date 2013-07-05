@@ -10,12 +10,24 @@ class Stacky
   def query keyword
     path = question_page(keyword).first_link
 
-    if path
-      open(@stack_url.question(path))
-    end
+    return "nothing found" unless path
 
-    "hmm... i don't know yet"
+    answer = answer_page(path)
+
+    "-------------------------------------" + "\n" +
+    answer.title + "\n" +
+    "-------------------------------------" + "\n" +
+    answer.question + "\n" +
+    "-------------------------------------" + "\n" +
+    answer.answer + "\n" +
+    "-------------------------------------"+ "\n"
   end
+
+  def answer_page(path)
+    answer_doc = open(@stack_url.question(path))
+    AnswerPage.new(answer_doc)
+  end
+
 
   def question_page(keyword)
     question_doc = open(@stack_url.search_for(keyword))

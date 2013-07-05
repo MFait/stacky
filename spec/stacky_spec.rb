@@ -22,9 +22,9 @@ describe 'Stacky' do
 
     stacky_says = stacky.query("anykeyword")
 
-    #stacky_says.should include("The Title")
-    #stacky_says.should include("The Question")
-    #stacky_says.should include("The Answer")
+    stacky_says.should include("The Title")
+    stacky_says.should include("The Question")
+    stacky_says.should include("The Answer")
   end
 
 end
