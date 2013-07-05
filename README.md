@@ -1,6 +1,6 @@
 todo
 ====
 
-* query for first found qustion, print accepted answer
-* create stacky module
+* fallback if there's no accepted answer
 * create gem
+* choose from list of questions
